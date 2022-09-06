@@ -29,7 +29,8 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const isAndroid = /Android/.test(userAgent);
   const isIOS =
     /\b(iPad|iPhone|iPod)(?=;)/.test(userAgent) ||
-    (platform === "MacIntel" && maxTouchPoints > 1);
+    (platform === "MacIntel" && maxTouchPoints > 1) ||
+    userAgent.includes('- ExamLogin');
 
   // Limit canvas size to 5 mega-pixels on mobile.
   // Support: Android, iOS
