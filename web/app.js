@@ -1856,7 +1856,7 @@ const PDFViewerApplication = {
       return;
     }
 
-    if (!this.supportsPrinting) {
+    if (true) {
       this.l10n.get("printing_not_supported").then(msg => {
         this._otherError(msg);
       });
@@ -2939,13 +2939,13 @@ function webViewerKeyDown(evt) {
     if (cmd === 1 || cmd === 8) {
       switch (evt.keyCode) {
         case 83: // s
-          eventBus.dispatch("download", { source: window });
+          // eventBus.dispatch("download", { source: window });
           handled = true;
           break;
 
         case 79: // o
           if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
-            eventBus.dispatch("openfile", { source: window });
+            // eventBus.dispatch("openfile", { source: window });
             handled = true;
           }
           break;
@@ -2957,7 +2957,7 @@ function webViewerKeyDown(evt) {
   if (cmd === 3 || cmd === 10) {
     switch (evt.keyCode) {
       case 80: // p
-        PDFViewerApplication.requestPresentationMode();
+        // PDFViewerApplication.requestPresentationMode();
         handled = true;
         break;
       case 71: // g
@@ -3086,7 +3086,7 @@ function webViewerKeyDown(evt) {
         break;
 
       case 82: // 'r'
-        PDFViewerApplication.rotatePages(90);
+        // PDFViewerApplication.rotatePages(90);
         break;
 
       case 115: // F4
@@ -3124,7 +3124,7 @@ function webViewerKeyDown(evt) {
         break;
 
       case 82: // 'r'
-        PDFViewerApplication.rotatePages(-90);
+        // PDFViewerApplication.rotatePages(-90);
         break;
     }
   }
